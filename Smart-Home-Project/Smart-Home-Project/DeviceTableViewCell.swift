@@ -7,17 +7,32 @@
 
 import UIKit
 
+protocol DeviceTableViewCellDelegate: AnyObject {
+    func markAsSwitchButtonWasTapped(_ cell: DeviceTableViewCell)
+}
+
 class DeviceTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Outlets
+    
+    @IBOutlet weak var deviceNameLabel: UILabel!
+    @IBOutlet weak var deviceSwitchLabel: UISwitch!
+    
+    // MARK: - Properties
+    weak var emperor: DeviceTableViewCell?
+    
+    // MARK: - Functions
+    func updateViews(device: Device) {
+        deviceNameLabel.text = device.text
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // MARK: - Actions
+    
+    @IBAction func toggleSwitch(_ sender: Any) {
+        emperor?.markAsSwitchButtonWasTapped(self)
     }
-
+    
 }
+
+
+

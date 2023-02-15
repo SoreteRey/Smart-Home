@@ -25,7 +25,7 @@ class DeviceController: Codable {
     //Crud Functions
     
     func createDevice(text: String) {
-        let newDevice = Device(name: name)
+        let newDevice = Device(text: text)
         devices.append(newDevice)
         saveDevicesToDisk()
     }

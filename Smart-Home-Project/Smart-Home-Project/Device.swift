@@ -9,11 +9,11 @@ import Foundation
 
 class Device: Codable {
     
-    let name: String
+    let text: String
     var isON: Bool
     
-    init(name: String, isON: Bool = false) {
-        self.name = name
+    init(text: String, isON: Bool = false) {
+        self.text = text
         self.isON = isON
     }
 }//end of class
