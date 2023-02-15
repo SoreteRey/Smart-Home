@@ -13,6 +13,8 @@
 		93DC7D7D299D929D00B92A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DC7D7B299D929D00B92A9C /* Main.storyboard */; };
 		93DC7D7F299D929E00B92A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DC7D7E299D929E00B92A9C /* Assets.xcassets */; };
 		93DC7D82299D929E00B92A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DC7D80299D929E00B92A9C /* LaunchScreen.storyboard */; };
+		93DC7D8A299D92F400B92A9C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D89299D92F400B92A9C /* Device.swift */; };
+		93DC7D8C299D934300B92A9C /* Device Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D8B299D934300B92A9C /* Device Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		93DC7D7E299D929E00B92A9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93DC7D81299D929E00B92A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93DC7D83299D929E00B92A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93DC7D89299D92F400B92A9C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		93DC7D8B299D934300B92A9C /* Device Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				93DC7D7E299D929E00B92A9C /* Assets.xcassets */,
 				93DC7D80299D929E00B92A9C /* LaunchScreen.storyboard */,
 				93DC7D83299D929E00B92A9C /* Info.plist */,
+				93DC7D89299D92F400B92A9C /* Device.swift */,
+				93DC7D8B299D934300B92A9C /* Device Controller.swift */,
 			);
 			path = "Smart-Home-Project";
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DC7D7A299D929D00B92A9C /* ViewController.swift in Sources */,
+				93DC7D8C299D934300B92A9C /* Device Controller.swift in Sources */,
 				93DC7D76299D929D00B92A9C /* AppDelegate.swift in Sources */,
 				93DC7D78299D929D00B92A9C /* SceneDelegate.swift in Sources */,
+				93DC7D8A299D92F400B92A9C /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
