@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,32 +24,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="3pK-QX-B2q">
-                                            <rect key="frame" x="17.666666666666657" y="34.666666666666664" width="357.66666666666674" height="30.999999999999993"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-TV-axF">
+                                            <rect key="frame" x="28" y="19" width="337" height="62"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(device name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYT-hp-3KC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="31"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="62"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tTB-C5-J3m">
-                                                    <rect key="frame" x="308.66666666666663" y="0.0" width="51" height="31"/>
+                                                    <rect key="frame" x="288" y="0.0" width="51" height="62"/>
                                                     <connections>
                                                         <action selector="toggleSwitch:" destination="fir-wb-pKr" eventType="valueChanged" id="zTa-uM-uWv"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tTB-C5-J3m" firstAttribute="leading" secondItem="SYT-hp-3KC" secondAttribute="trailing" constant="8" id="TPf-TG-jXw"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0zs-TV-axF" firstAttribute="leading" secondItem="K4C-YG-v0k" secondAttribute="leadingMargin" constant="8" id="9Ok-1A-zgz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0zs-TV-axF" secondAttribute="trailing" constant="8" id="IZ8-q0-19y"/>
+                                        <constraint firstItem="0zs-TV-axF" firstAttribute="top" secondItem="K4C-YG-v0k" secondAttribute="topMargin" constant="8" id="Igh-Al-BeK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0zs-TV-axF" secondAttribute="bottom" constant="8" id="f58-9a-oX4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="3pK-QX-B2q" firstAttribute="centerX" secondItem="fir-wb-pKr" secondAttribute="centerX" id="7fb-be-iWJ"/>
-                                    <constraint firstItem="3pK-QX-B2q" firstAttribute="centerY" secondItem="fir-wb-pKr" secondAttribute="centerY" id="v5h-Ke-ITB"/>
-                                </constraints>
                                 <connections>
+                                    <outlet property="deviceNameLabel" destination="SYT-hp-3KC" id="zT9-VS-Ae7"/>
                                     <outlet property="deviceSwitchLabel" destination="tTB-C5-J3m" id="Pwo-WV-NvX"/>
-                                    <outlet property="devicenNameLabel" destination="SYT-hp-3KC" id="M1W-hh-SZq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

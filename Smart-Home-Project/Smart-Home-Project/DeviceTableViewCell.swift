@@ -15,11 +15,12 @@ class DeviceTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
     
+
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var deviceSwitchLabel: UISwitch!
     
     // MARK: - Properties
-    weak var emperor: DeviceTableViewCell?
+    weak var emperor: DeviceTableViewCellDelegate?
     
     // MARK: - Functions
     func updateViews(device: Device) {

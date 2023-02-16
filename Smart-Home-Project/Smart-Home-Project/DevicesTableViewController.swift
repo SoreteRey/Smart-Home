@@ -29,9 +29,10 @@ class DevicesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as? DeviceTableViewCell else { return UITableViewCell()}
         
-        // Configure the cell...
+        let device = DeviceController.shared.devices[indexPath.row]
+        cell.updateViews(device: device)
         
         return cell
     }
@@ -39,11 +40,11 @@ class DevicesTableViewController: UITableViewController {
     private func presentNewDeviceAlertController() {
         let alertController = UIAlertController(title: "New Device", message: "Enter the name for your new device", preferredStyle: .alert)
         
-        alertController.addTextField { textField in textField.placeholder = "Your message here..."
+        alertController.addTextField { textField in textField.placeholder = "Your decive here..."
             
         }
         
-        let dissmissAction = UIAlertAction(title: "Delete", style: .cancel)
+        let dissmissAction = UIAlertAction(title: "Cancel", style: .cancel)
         let confirmAction = UIAlertAction(title: "Save", style: .default) { _ in
             guard let deviceTextField = alertController.textFields?.first,
                   let device = deviceTextField.text, !device.isEmpty else { return }
