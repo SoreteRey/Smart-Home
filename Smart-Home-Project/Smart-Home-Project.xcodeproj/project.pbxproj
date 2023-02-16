@@ -17,6 +17,8 @@
 		93DC7D8C299D934300B92A9C /* Device Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D8B299D934300B92A9C /* Device Controller.swift */; };
 		93DC7D8E299D9A9A00B92A9C /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D8D299D9A9A00B92A9C /* DevicesTableViewController.swift */; };
 		93DC7D90299D9CA400B92A9C /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D8F299D9CA400B92A9C /* DeviceTableViewCell.swift */; };
+		93DC7D98299EE27C00B92A9C /* ToggleAllDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D97299EE27C00B92A9C /* ToggleAllDevicesViewController.swift */; };
+		93DC7D9A299EE32600B92A9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC7D99299EE32600B92A9C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		93DC7D8B299D934300B92A9C /* Device Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device Controller.swift"; sourceTree = "<group>"; };
 		93DC7D8D299D9A9A00B92A9C /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		93DC7D8F299D9CA400B92A9C /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		93DC7D97299EE27C00B92A9C /* ToggleAllDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllDevicesViewController.swift; sourceTree = "<group>"; };
+		93DC7D99299EE32600B92A9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				93DC7D77299D929D00B92A9C /* SceneDelegate.swift */,
 				93DC7D79299D929D00B92A9C /* ViewController.swift */,
 				93DC7D7B299D929D00B92A9C /* Main.storyboard */,
+				93DC7D99299EE32600B92A9C /* Constants.swift */,
+				93DC7D97299EE27C00B92A9C /* ToggleAllDevicesViewController.swift */,
 				93DC7D7E299D929E00B92A9C /* Assets.xcassets */,
 				93DC7D80299D929E00B92A9C /* LaunchScreen.storyboard */,
 				93DC7D83299D929E00B92A9C /* Info.plist */,
@@ -154,9 +160,11 @@
 				93DC7D8C299D934300B92A9C /* Device Controller.swift in Sources */,
 				93DC7D8E299D9A9A00B92A9C /* DevicesTableViewController.swift in Sources */,
 				93DC7D76299D929D00B92A9C /* AppDelegate.swift in Sources */,
+				93DC7D98299EE27C00B92A9C /* ToggleAllDevicesViewController.swift in Sources */,
 				93DC7D78299D929D00B92A9C /* SceneDelegate.swift in Sources */,
 				93DC7D8A299D92F400B92A9C /* Device.swift in Sources */,
 				93DC7D90299D9CA400B92A9C /* DeviceTableViewCell.swift in Sources */,
+				93DC7D9A299EE32600B92A9C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

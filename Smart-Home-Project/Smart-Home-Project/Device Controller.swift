@@ -36,6 +36,15 @@ class DeviceController: Codable {
         
     }
     
+    func turnAllOnButtonTapped() {
+        devices.forEach { $0.isON = true }
+        saveDevicesToDisk()
+    }
+    
+    func turnAllOffButtonTapped() {
+        devices.forEach { $0.isON = false }
+    }
+    
     //Persistence
     // Computed Property
     private var devicesURL: URL? {

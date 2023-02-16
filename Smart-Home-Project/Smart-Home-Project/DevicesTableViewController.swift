@@ -36,6 +36,24 @@ class DevicesTableViewController: UITableViewController {
         cell.emperor = self
         return cell
     }
+    // MARK: - Functions for Notifications
+    func setUpNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllOnButtonTapped), name: Constants.Notifications.turnAllOnButtonTapped, object: nil)
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllOffButtonTapped), name: Constants.Notifications.turnAllOffButtonTapped, object: nil)
+    }
+    @objc func turnAllOnButtonTapped() {
+        DeviceController.shared.turnAllOnButtonTapped()
+        tableView.reloadData()
+    }
+    @objc func turnAllOffButtonTapped() {
+        DeviceController.shared.turnAllOffButtonTapped()
+        tableView.reloadData()
+    }
+    
+    
+    
+    
     // MARK: - Functions for UIAlert
     private func presentNewDeviceAlertController() {
         let alertController = UIAlertController(title: "New Device", message: "Enter the name for your new device", preferredStyle: .alert)
