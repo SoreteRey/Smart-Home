@@ -14,8 +14,6 @@ protocol DeviceTableViewCellDelegate: AnyObject {
 class DeviceTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
-    
-
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var deviceSwitchLabel: UISwitch!
     
@@ -26,9 +24,11 @@ class DeviceTableViewCell: UITableViewCell {
     func updateViews(device: Device) {
         deviceNameLabel.text = device.text
     }
+    func toggleSwitchFunc(toggle: Device){
+        deviceSwitchLabel.isOn = toggle.isON
+    }
     
     // MARK: - Actions
-    
     @IBAction func toggleSwitch(_ sender: Any) {
         emperor?.markAsSwitchButtonWasTapped(self)
     }

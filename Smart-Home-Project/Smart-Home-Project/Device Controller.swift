@@ -40,7 +40,7 @@ class DeviceController: Codable {
     // Computed Property
     private var devicesURL: URL? {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let finalURL = documentsDirectory.appendingPathComponent("devices.json")
+        let finalURL = documentsDirectory.appendingPathComponent("device.json")
         
         return finalURL
     }// End of URL
@@ -50,7 +50,7 @@ class DeviceController: Codable {
         do {
             let jsonData = try JSONEncoder().encode(devices)
             try jsonData.write(to: saveLocation)
-        } catch let error {
+        } catch {
             print("Error saving devices", error.localizedDescription)
         }
     }
@@ -61,7 +61,7 @@ class DeviceController: Codable {
             let retrievedJSONData = try Data(contentsOf: url)
             let decodedDevices = try JSONDecoder().decode([Device].self, from: retrievedJSONData)
             self.devices = decodedDevices
-        } catch let error {
+        } catch {
             print("Error loading devices", error.localizedDescription)
         }
     }

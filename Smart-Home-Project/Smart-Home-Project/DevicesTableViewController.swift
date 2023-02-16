@@ -14,7 +14,6 @@ class DevicesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     // MARK: - Actions
     
@@ -34,6 +33,7 @@ class DevicesTableViewController: UITableViewController {
         let device = DeviceController.shared.devices[indexPath.row]
         cell.updateViews(device: device)
         
+        cell.emperor = self
         return cell
     }
     // MARK: - Functions for UIAlert
