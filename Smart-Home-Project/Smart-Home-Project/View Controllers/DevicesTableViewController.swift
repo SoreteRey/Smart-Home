@@ -13,6 +13,7 @@ class DevicesTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNotifications()
         
     }
     // MARK: - Actions
@@ -45,6 +46,7 @@ class DevicesTableViewController: UITableViewController {
     @objc func turnAllOnButtonTapped() {
         DeviceController.shared.turnAllOnButtonTapped()
         tableView.reloadData()
+        
     }
     @objc func turnAllOffButtonTapped() {
         DeviceController.shared.turnAllOffButtonTapped()
